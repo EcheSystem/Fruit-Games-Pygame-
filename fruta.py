@@ -19,7 +19,8 @@ width,height=800,600
 speed=[1,1]
 #color
 white=255,255,255
-black=0,0,0
+#sopa de maricos Rgb(255,228,196)
+black=255,228,196
 #Manzana
 sierra=pygame.image.load("img/manz.png")
 sierrarect=sierra.get_rect()
@@ -81,7 +82,7 @@ while run:
     if sierrarect.top < 0 or sierrarect.bottom >height:
         speed[1]= -speed[1]
         if sierrarect.bottom >height: 
-            puntos=puntos-5
+            puntos=0
             texto=fuente.render("Score: "+ str(puntos),True,black)
 
     if 100>puntos == 100 :
